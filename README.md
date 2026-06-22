@@ -2,13 +2,12 @@
 
 ##  Equipo de Trabajo e Integrantes
 
-
-| Rol en el Proyecto | Nombre Completo | Usuario GitHub |
-| :--- | :--- | :--- |
-| **Líder de Proyecto / BPM Architect** | [Nombre del Integrante 1] | [@usuario1](https://github.com/usuario1) |
-| **Analista de Procesos / QA** | [Nombre del Integrante 2] | [@usuario2](https://github.com/usuario2) |
-| **Desarrollador BDM / UI Designer**| [Nombre del Integrante 3] | [@usuario3](https://github.com/usuario3) |
-| **Especialista de Integración** | [Nombre del Integrante 4] | [@usuario4](https://github.com/usuario4) |
+Integrantes
+-Misael Palomino
+-Jose Alva
+-Arthur Meza
+-Sebastian Himan
+-Gonzalo Zapana
 
 ---
 
