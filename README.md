@@ -1,9 +1,7 @@
-# 📚 Sistema de Gestión de Ventas - Librerías Crisol 🚀
+#  Sistema de Gestión de Ventas - Librerías Crisol 
 
-## 👥 Equipo de Trabajo e Integrantes
+##  Equipo de Trabajo e Integrantes
 
-> [!NOTE]
-> Este proyecto ha sido desarrollado como parte del laboratorio de Modelado y Automatización de Procesos de Negocio utilizando la plataforma **Bonita BPM**.
 
 | Rol en el Proyecto | Nombre Completo | Usuario GitHub |
 | :--- | :--- | :--- |
