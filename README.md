@@ -24,6 +24,16 @@
 En el contexto actual, las organizaciones requieren comprender de manera integral su estructura y funcionamiento para mejorar la toma de decisiones y optimizar sus procesos. La arquitectura empresarial permite analizar de forma sistemática los componentes clave de una empresa, tales como sus procesos de negocio, áreas funcionales, información y objetivos estratégicos.
 El presente reporte tiene como objetivo describir y analizar la arquitectura empresarial de la empresa Librerías Crisol S.A.C., identificando sus principales procesos de negocio, los sectores involucrados y los elementos de información necesarios para su correcto funcionamiento. A partir de la información disponible y del análisis del dominio del problema, se busca obtener una visión clara de cómo la organización opera y cómo sus diferentes componentes se integran para cumplir con sus objetivos.
 
+### Misión
+Somos la cadena de librerías con la oferta más amplia y variada de productos de entretenimiento cultural, brindando el mejor nivel de servicio en el mercado peruano. Nos caracterizamos por los altos estándares de respeto, calidez y amabilidad de nuestros colaboradores.
+
+### Visión
+
+Ser la principal cadena de tiendas de entretenimiento cultural ampliando nuestra red de librerías hacia todas las regiones del país, y de esta manera, convertirnos progresivamente en referente cultural de América Latina.
+
+## Organigrama
+
+<img width="435" height="325" alt="image" src="https://github.com/user-attachments/assets/675d86ae-dc53-478e-912e-29636af95c6a" />
 
 ## ⚙️ Proceso de Negocio Modelado
 
