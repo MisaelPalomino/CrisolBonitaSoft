@@ -11,7 +11,7 @@ Integrantes
 
 ---
 
-## 🏢 Cliente / Organización
+##  Cliente / Organización
 
 * **Organización:** Librerías Crisol S.A.
 * **Sector:** Retail / Comercialización de Libros y Artículos Culturales.
@@ -34,19 +34,19 @@ Ser la principal cadena de tiendas de entretenimiento cultural ampliando nuestra
 
 <img width="435" height="325" alt="image" src="https://github.com/user-attachments/assets/675d86ae-dc53-478e-912e-29636af95c6a" />
 
-## ⚙️ Proceso de Negocio Modelado
+##  Proceso de Negocio Modelado
 
 ### `ProcesoVentasCrisol` (Versión 1.0.0)
 
 Este proceso automatiza el ciclo de atención al cliente desde que se solicita un libro en los pasillos de la tienda hasta el cierre de la transacción financiera en la caja registradora. El ecosistema está diseñado bajo un estricto control de aislamiento de privilegios, dividiendo las responsabilidades mediante actores y grupos del sistema organizativo:
 
-#### 🔍 Flujo de Operaciones:
+####  Flujo de Operaciones:
 1. **Fase de Consulta (Asesor de Tienda - `/acme/production`):** El asesor recibe el código de libro solicitado por el cliente e interactúa con el sistema mediante un formulario exclusivo para verificar el stock mediante el parámetro `isbnLibro`. Si existe disponibilidad, el flujo le asigna la tarea humana de recuperar el producto físicamente del estante.
 2. **Fase de Facturación y Cierre (Cajero - `/acme/finance`):** Una vez que el libro llega a la estación de cobro, el terminal del cajero se activa automáticamente con la tarea de facturación. Se utiliza un formulario dinámico que valida campos obligatorios (*Required*) como el **DNI del Cliente**, el **Monto Total (S/.)**, y registra observaciones en el historial de la compra, impactando directamente en el Modelo de Datos de Negocio (BDM) de forma segura antes de emitir la compra exitosa.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 * **BPMN Engine:** Bonita Studio v8.x
 * **Database:** Bonita Business Data Model (BDM) / H2 Database Local
