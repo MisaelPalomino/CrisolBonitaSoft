@@ -20,6 +20,11 @@
 
 ---
 
+## Introducción
+En el contexto actual, las organizaciones requieren comprender de manera integral su estructura y funcionamiento para mejorar la toma de decisiones y optimizar sus procesos. La arquitectura empresarial permite analizar de forma sistemática los componentes clave de una empresa, tales como sus procesos de negocio, áreas funcionales, información y objetivos estratégicos.
+El presente reporte tiene como objetivo describir y analizar la arquitectura empresarial de la empresa Librerías Crisol S.A.C., identificando sus principales procesos de negocio, los sectores involucrados y los elementos de información necesarios para su correcto funcionamiento. A partir de la información disponible y del análisis del dominio del problema, se busca obtener una visión clara de cómo la organización opera y cómo sus diferentes componentes se integran para cumplir con sus objetivos.
+
+
 ## ⚙️ Proceso de Negocio Modelado
 
 ### `ProcesoVentasCrisol` (Versión 1.0.0)
