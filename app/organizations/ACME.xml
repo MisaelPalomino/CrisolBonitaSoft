@@ -556,11 +556,8 @@
     <role name="Agente">
       <displayName>Agente</displayName>
     </role>
-    <role name="Supervisor">
-      <displayName>Supervisor</displayName>
-    </role>
-    <role name="Logistica">
-      <displayName>Log&#xed;stica</displayName>
+    <role name="supervisor">
+      <displayName>supervisor</displayName>
     </role>
   </roles>
   <groups>
@@ -631,7 +628,7 @@
     </membership>
     <membership>
       <userName>helen.kelly</userName>
-      <roleName>member</roleName>
+      <roleName>supervisor</roleName>
       <groupName>hr</groupName>
       <groupParentPath>/acme</groupParentPath>
     </membership>

@@ -1,10 +1,10 @@
 {
-  "id" : "crearCliente",
-  "name" : "crearCliente",
+  "id" : "identificarTipo",
+  "name" : "identificarTipo",
   "type" : "form",
-  "uuid" : "03d01048-a120-48c8-9cde-b88d477bf60f",
+  "uuid" : "c89d1b0f-2132-4a97-b3ef-0d232c31f114",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1782091029963,
+  "lastUpdate" : 1782091067761,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -13,20 +13,8 @@
         "dimension" : {
           "xs" : 12
         },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "repeatedCollection" : {
-            "type" : "variable"
-          }
-        },
-        "reference" : "05762628-e82b-470d-bdbe-b8807e873c27",
+        "propertyValues" : { },
+        "reference" : "5ff7ac56-e808-478c-b23f-c289caec4fdc",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -54,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "Registre Datos"
+                  "value" : "Identificar el Tipo"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -69,9 +57,57 @@
                   "value" : false
                 }
               },
-              "reference" : "aab71e6b-18dc-4e46-a197-309d6ad5e8ae",
+              "reference" : "8cd183b9-35ae-426a-9775-9809dc531f66",
               "hasValidationError" : false,
               "id" : "pbTitle",
+              "description" : ""
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "md" : 12,
+                "sm" : 12,
+                "xs" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "allowHtml" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "labelHidden" : {
+                  "type" : "constant",
+                  "value" : true
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "label" : {
+                  "type" : "interpolation"
+                },
+                "text" : {
+                  "type" : "interpolation",
+                  "value" : "{{ task.displayDescription }}"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "left"
+                },
+                "dimension" : {
+                  "type" : "constant",
+                  "value" : 12
+                }
+              },
+              "reference" : "8768e374-893e-4df6-9c41-99c02b5237b9",
+              "hasValidationError" : false,
+              "id" : "pbText",
               "description" : ""
             }
           ]
@@ -94,7 +130,7 @@
             "value" : false
           }
         },
-        "reference" : "cb5cd86b-a5cd-4ae3-ba54-a4aeebd4ee51",
+        "reference" : "272805d2-b14d-454e-a575-1667d6714190",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -103,7 +139,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "3e4edbf6-7994-4ba4-a753-b7bb666494ee",
+          "reference" : "85e2b6c2-fde9-40bd-b15e-9be16afa2939",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -133,7 +169,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "acd03c36-68bd-4408-bb51-0b9f81089c45",
+                "reference" : "5fd9d692-8b7f-4f94-979c-5ae67824dc6e",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -147,6 +183,82 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "MM/dd/yyyy"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Fecha"
+                        },
+                        "type" : {
+                          "type" : "constant"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "todayLabel" : {
+                          "type" : "constant",
+                          "value" : "Today"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "Enter a date (mm/dd/yyyy)"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "ticketVar.fecha"
+                        }
+                      },
+                      "reference" : "28eb3112-761e-41a5-9ac1-b663737595f6",
+                      "hasValidationError" : false,
+                      "id" : "pbDatePicker",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
@@ -173,7 +285,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Nombre"
+                          "value" : "Tipo"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -188,14 +300,40 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "clienteVar.nombre"
+                          "value" : "ticketVar.tipo"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "debounce" : {
+                          "type" : "constant",
+                          "value" : 0
+                        },
+                        "min" : {
+                          "type" : "constant"
+                        },
+                        "max" : {
+                          "type" : "constant"
+                        },
+                        "step" : {
+                          "type" : "constant",
+                          "value" : 1
                         }
                       },
-                      "reference" : "29e692d8-4cfd-4881-a0bc-1053a3ecd875",
+                      "reference" : "57268a54-3db0-4663-988f-75c07386376a",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -237,7 +375,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Email"
+                          "value" : "Descripcion"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -252,14 +390,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "clienteVar.email"
+                          "value" : "ticketVar.descripcion"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
                         }
                       },
-                      "reference" : "10029841-bddd-4ff3-8703-f284b19f4c4c",
+                      "reference" : "67579d8a-7cf0-4a37-b66a-6fd0495a46a1",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -301,7 +439,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Telefono"
+                          "value" : "Estado"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -316,14 +454,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "clienteVar.telefono"
+                          "value" : "ticketVar.estado"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : false
                         }
                       },
-                      "reference" : "b015260f-3d6a-47bb-b54c-0dc1872ec685",
+                      "reference" : "37fadfd2-a1a9-4880-93fc-c14b4a2de858",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -407,7 +545,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "15656256-5a48-40f0-937e-d449177974f3",
+                "reference" : "e5f5bca7-2542-4afb-91a0-36c91c5a4323",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -459,7 +597,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "df00ae4d-305a-4bbe-85a5-6b8ec74b9f10",
+                "reference" : "5ba8b4e8-7828-4135-a252-165fadbcfd08",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -471,13 +609,6 @@
     ]
   ],
   "variables" : {
-    "clienteVar" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.clienteVar_ref.link}}"
-      ],
-      "exposed" : false
-    },
     "task" : {
       "type" : "url",
       "value" : [
@@ -503,13 +634,14 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.clienteVar ){",
+        "if( $data.ticketVar ){",
         "\treturn {",
-        "\t\t//map clienteVar variable to expected task contract input",
-        "\t\tclienteVarInput: {",
-        "\t\t\tnombre: $data.clienteVar.nombre !== undefined ? $data.clienteVar.nombre : null,",
-        "\t\t\temail: $data.clienteVar.email !== undefined ? $data.clienteVar.email : null,",
-        "\t\t\ttelefono: $data.clienteVar.telefono !== undefined ? $data.clienteVar.telefono : null",
+        "\t\t//map ticketVar variable to expected task contract input",
+        "\t\tticketVarInput: {",
+        "\t\t\tfecha: $data.ticketVar.fecha !== undefined ? $data.ticketVar.fecha : null,",
+        "\t\t\ttipo: $data.ticketVar.tipo !== undefined ? $data.ticketVar.tipo : null,",
+        "\t\t\tdescripcion: $data.ticketVar.descripcion !== undefined ? $data.ticketVar.descripcion : null,",
+        "\t\t\testado: $data.ticketVar.estado !== undefined ? $data.ticketVar.estado : null",
         "\t\t}",
         "\t}",
         "}"
@@ -523,6 +655,13 @@
       ],
       "exposed" : false
     },
+    "ticketVar" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.ticketVar_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
@@ -533,16 +672,16 @@
   },
   "assets" : [
     {
-      "id" : "96b48966-4668-41f4-ae7a-2ccc677f77cd",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "2e3e2f10-2d90-411a-8609-d0e8bf0ec31d",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "85f0cc46-aaac-4939-be5e-fa3df875bc90",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "e1b61c03-ce77-4f1f-82bb-526f0fb3e41f",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }

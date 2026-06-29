@@ -11,11 +11,29 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.DetalleOrden">
+            <fields>
+                <field type="STRING" length="255" name="myAttribute" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.Encuesta">
             <fields>
                 <field type="INTEGER" length="255" name="puntuacion" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="comentario" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Ticket" fetchType="LAZY" name="ticket" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.EntradaProducto">
+            <fields>
+                <field type="LOCALDATE" length="255" name="fechaEntrada" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="cantidadRecibida" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="observacion" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -28,6 +46,24 @@
                 <field type="STRING" length="255" name="tienda" nullable="true" collection="false"/>
                 <field type="DOUBLE" length="255" name="monto" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Cliente" fetchType="LAZY" name="cliente" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.IncidenciaInventario">
+            <fields>
+                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="fechaIncidencia" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tipoIncidencia" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.OrdenCompra">
+            <fields>
+                <field type="STRING" length="255" name="myAttribute" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -47,6 +83,31 @@
                 <field type="STRING" length="255" name="codigo" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="isbn" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="categoria" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="precio" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="stock" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cantidadDisponible" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Proveedor">
+            <fields>
+                <field type="STRING" length="255" name="contacto" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="tiempoEntrega" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.SolicitudReposicion">
+            <fields>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaSolicitud" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="cantidadSolicitada" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -69,6 +130,18 @@
                 <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Cliente" fetchType="LAZY" name="cliente" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.Solucion" fetchType="LAZY" name="solucion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Venta">
+            <fields>
+                <field type="STRING" length="255" name="cantidadStock" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="dniCliente" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="montoTotal" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="isbnLibro" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="historialCompra" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
