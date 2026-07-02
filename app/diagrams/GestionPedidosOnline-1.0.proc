@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_3cfS4HNZEfGCo5Po98PXuA" name="GestionPedidosOnline" bonitaModelVersion="9">
-    <elements xmi:type="process:Pool" xmi:id="_3cfS4XNZEfGCo5Po98PXuA" name="Pool">
+    <elements xmi:type="process:Pool" xmi:id="_3cfS4XNZEfGCo5Po98PXuA" name="GestionPedidosOnline">
       <elements xmi:type="process:Lane" xmi:id="_3cfS4nNZEfGCo5Po98PXuA" name="Empleado (lane) " actor="_3cfS-3NZEfGCo5Po98PXuA">
         <elements xmi:type="process:StartEvent" xmi:id="_3cfS43NZEfGCo5Po98PXuA" name="Inicio1" outgoing="_3cfS-HNZEfGCo5Po98PXuA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_3cfS5HNZEfGCo5Po98PXuA" name="" content="" returnTypeFixed="true"/>
@@ -18,14 +18,14 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_3cfS7nNZEfGCo5Po98PXuA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_3cfS73NZEfGCo5Po98PXuA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_3cfS8HNZEfGCo5Po98PXuA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_3cfS8XNZEfGCo5Po98PXuA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_5QKGYHW-EfG9MbpY6EBbAg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_3cfS8nNZEfGCo5Po98PXuA"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_3cfS83NZEfGCo5Po98PXuA" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
       <formMapping xmi:type="process:FormMapping" xmi:id="_3cfS9HNZEfGCo5Po98PXuA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_3cfS9XNZEfGCo5Po98PXuA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_5QKGYXW-EfG9MbpY6EBbAg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_3cfS9nNZEfGCo5Po98PXuA">
         <targetForm xmi:type="expression:Expression" xmi:id="_3cfS93NZEfGCo5Po98PXuA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

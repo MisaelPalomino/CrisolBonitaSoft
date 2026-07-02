@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_t4OuYHNZEfGCo5Po98PXuA" name="VentaTienda" bonitaModelVersion="9">
-    <elements xmi:type="process:Pool" xmi:id="_t4OuYXNZEfGCo5Po98PXuA" name="Pool">
+    <elements xmi:type="process:Pool" xmi:id="_t4OuYXNZEfGCo5Po98PXuA" name="VentaTienda">
       <elements xmi:type="process:Lane" xmi:id="_t4OuYnNZEfGCo5Po98PXuA" name="Empleado (lane) " actor="_t4Oue3NZEfGCo5Po98PXuA">
         <elements xmi:type="process:StartEvent" xmi:id="_t4OuY3NZEfGCo5Po98PXuA" name="Inicio1" outgoing="_t4OueHNZEfGCo5Po98PXuA">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_t4OuZHNZEfGCo5Po98PXuA" name="" content="" returnTypeFixed="true"/>
