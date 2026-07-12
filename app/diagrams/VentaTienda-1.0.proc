@@ -83,7 +83,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_7vkx13viEfGxnaA3w4QKIQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_7vkx1nviEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_7vkx2XviEfGxnaA3w4QKIQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_7vkx2nviEfGxnaA3w4QKIQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_fv_Z8H4xEfGZJ5o0xROyNw" name="NoStock" content="48b84359-d9b2-4132-a131-2e585d672b81" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_7vkx2HviEfGxnaA3w4QKIQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_7vkx23viEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -99,15 +99,30 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_n3qWwnvjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_n3qWwXvjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_n3qWw3vjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_aGD0oH4_EfGZJ5o0xROyNw">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_aGD0oX4_EfGZJ5o0xROyNw" name="clienteActual" content="clienteActual" type="TYPE_VARIABLE" returnType="com.company.model.Cliente">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_a0PwUH4_EfGZJ5o0xROyNw" name="clienteActual" dataType="_t4OulHNZEfGCo5Po98PXuA" className="com.company.model.Cliente"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_aGD0on4_EfGZJ5o0xROyNw" name="newScript()" content="com.company.model.Cliente nuevoCliente = new com.company.model.Cliente()&#xD;&#xA;&#xD;&#xA;nuevoCliente.setNombre(clienteActualInput.Nombre)&#xD;&#xA;nuevoCliente.setNombre(clienteActualInput.nombre) // Nota: Revisa si tu BDM usa setNombre o setNombreCompleto según tus atributos&#xD;&#xA;nuevoCliente.setEmail(clienteActualInput.email)&#xD;&#xA;nuevoCliente.setTelefono(clienteActualInput.telefono)&#xD;&#xA;&#xD;&#xA;return nuevoCliente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Cliente">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_6uBlUH4_EfGZJ5o0xROyNw" name="clienteActualInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_aGD0o34_EfGZJ5o0xROyNw" type="CREATE_BUSINESS_DATA"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_n3qWxHvjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_n3qWxXvjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_n3qWxnvjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_n3qWyHvjEfGxnaA3w4QKIQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_n3qWx3vjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_n3qWynvjEfGxnaA3w4QKIQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_n3qWy3vjEfGxnaA3w4QKIQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_Qf9SgH4-EfGZJ5o0xROyNw" name="FindClient" content="95909e99-0c52-4bd2-aec6-81fbe4b74aa2" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
-          <contract xmi:type="process:Contract" xmi:id="_n3qWyXvjEfGxnaA3w4QKIQ"/>
+          <contract xmi:type="process:Contract" xmi:id="_n3qWyXvjEfGxnaA3w4QKIQ">
+            <inputs xmi:type="process:ContractInput" xmi:id="_Ok3e0H4-EfGZJ5o0xROyNw" name="clienteActualInput" type="COMPLEX" dataReference="clienteActual" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_Ok3e0X4-EfGZJ5o0xROyNw" name="nombre" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Ok3e0n4-EfGZJ5o0xROyNw" name="email" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_Ok3e034-EfGZJ5o0xROyNw" name="telefono" createMode="false"/>
+            </inputs>
+          </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_n3qWzHvjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:ServiceTask" xmi:id="_oYgaAHvjEfGxnaA3w4QKIQ" name="Proceso_Pago_Historial_Stock" outgoing="_1wGGMHvjEfGxnaA3w4QKIQ" incoming="_wzfCQHvjEfGxnaA3w4QKIQ">
@@ -120,7 +135,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_oYhBF3vjEfGxnaA3w4QKIQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_oYhBFnvjEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_o4PqAHvjEfGxnaA3w4QKIQ" name="Tarea3" outgoing="_p-KwQnvjEfGxnaA3w4QKIQ" incoming="_1wGGMHvjEfGxnaA3w4QKIQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_o4PqAHvjEfGxnaA3w4QKIQ" name="EntregarLibro" outgoing="_p-KwQnvjEfGxnaA3w4QKIQ" incoming="_1wGGMHvjEfGxnaA3w4QKIQ" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_o4PqAnvjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_o4PqAXvjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_o4PqA3vjEfGxnaA3w4QKIQ" name="" content="" returnTypeFixed="true"/>
@@ -144,6 +159,12 @@
       <data xmi:type="process:BusinessObjectData" xmi:id="_3YaLAH5YEfGZJpo0xROyNw" name="productoSeleccionado" dataType="_t4OulHNZEfGCo5Po98PXuA" className="com.company.model.Producto">
         <defaultValue xmi:type="expression:Expression" xmi:id="_3YaLAX5YEfGZJpo0xROyNw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_A_NhcH4-EfGZJ5o0xROyNw" name="clienteActual" dataType="_t4OulHNZEfGCo5Po98PXuA" className="com.company.model.Cliente">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_A_NhcX4-EfGZJ5o0xROyNw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_D4xvkH4-EfGZJ5o0xROyNw" name="ventaRegistro" dataType="_t4OulHNZEfGCo5Po98PXuA" className="com.company.model.Venta">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_D4xvkX4-EfGZJ5o0xROyNw" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_t4OudHNZEfGCo5Po98PXuA">
         <targetForm xmi:type="expression:Expression" xmi:id="_t4OudXNZEfGCo5Po98PXuA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
@@ -158,13 +179,15 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_uCHjUHviEfGxnaA3w4QKIQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_uCIKYHviEfGxnaA3w4QKIQ" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="__agygHviEfGxnaA3w4QKIQ" name="si" target="_7buBsHviEfGxnaA3w4QKIQ" source="_ur1OsHviEfGxnaA3w4QKIQ">
+      <connections xmi:type="process:SequenceFlow" xmi:id="__agygHviEfGxnaA3w4QKIQ" name="si" target="_7buBsHviEfGxnaA3w4QKIQ" source="_ur1OsHviEfGxnaA3w4QKIQ" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="__ahZkHviEfGxnaA3w4QKIQ"/>
         <condition xmi:type="expression:Expression" xmi:id="__ahZkXviEfGxnaA3w4QKIQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_AZRg0HvjEfGxnaA3w4QKIQ" name="no" target="_7vkKwHviEfGxnaA3w4QKIQ" source="_ur1OsHviEfGxnaA3w4QKIQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_AZRg0XvjEfGxnaA3w4QKIQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_AZRg0nvjEfGxnaA3w4QKIQ" name="verificarStock" content="if (productoSeleccionado == null) {&#xD;&#xA;&#x9;return true;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;try {&#xD;&#xA;&#x9;if (productoSeleccionado.getStock() != null &amp;&amp; productoSeleccionado.getStock() &lt;= 0) {&#xD;&#xA;&#x9;&#x9;return true; &#xD;&#xA;&#x9;}&#xD;&#xA;} catch (Exception e) {&#xD;&#xA;&#x9;return true; &#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;return false;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_AZRg0nvjEfGxnaA3w4QKIQ" name="verificarStock" content="if (productoSeleccionado == null || productoSeleccionado.getStock() &lt;= 0) {&#xD;&#xA;    return true; &#xD;&#xA;}&#xD;&#xA;return false;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_4uSheX4wEfGZJ5o0xROyNw" name="productoSeleccionado" dataType="_t4OulHNZEfGCo5Po98PXuA" className="com.company.model.Producto"/>
+        </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_JvKSIHvjEfGxnaA3w4QKIQ" target="_sisX8HviEfGxnaA3w4QKIQ" source="_t4OuZ3NZEfGCo5Po98PXuA">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_JvK5MHvjEfGxnaA3w4QKIQ"/>
