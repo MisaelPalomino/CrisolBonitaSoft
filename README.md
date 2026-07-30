@@ -3,7 +3,15 @@
 Proyecto Bonita que modela el proceso de gestión de inventario de Librerías
 Crisol y lo integra de forma asíncrona con RabbitMQ y el servicio Django
 `SistemaAlmacenamientoCrisol`.
+## Equipo
 
+- Jose Javier Alva Cornejo
+- Sebastian Felipe Himan Burgos
+- Arthur Patrick Meza Pareja
+- Misael Jesús Palomino Rivadeneyra
+- Diego Benjamin Rivera Cruz
+- Gonzalo Rodrigo Zapana Pariapaza
+  
 ## Estado de la rama
 
 Este documento corresponde a la rama `feature/rabbitmq-inventario`.
