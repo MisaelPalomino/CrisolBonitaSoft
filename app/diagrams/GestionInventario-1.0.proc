@@ -296,6 +296,73 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_jHkvAl9fEfGovOaVKpslfQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_jHkvAV9fEfGovOaVKpslfQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_jHkvA19fEfGovOaVKpslfQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_l-qbYIwWEfGXGK3uBkYOOg" documentation="Envía una alerta al encargado cuando se detecta stock bajo." name="notificarStockBajoPorCorreo" definitionId="email" event="ON_ENTER" definitionVersion="1.3.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_l-tesIwWEfGXGK3uBkYOOg" definitionId="email" version="1.3.0" modelVersion="9">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-uFwIwWEfGXGK3uBkYOOg" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_l-uFwYwWEfGXGK3uBkYOOg" name="smtp.gmail.com" content="smtp.gmail.com" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-uFwowWEfGXGK3uBkYOOg" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_l-uFw4wWEfGXGK3uBkYOOg" name="465" content="465" returnType="java.lang.Integer" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-uFxIwWEfGXGK3uBkYOOg" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_l-uFxYwWEfGXGK3uBkYOOg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-uFxowWEfGXGK3uBkYOOg" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_l-uFx4wWEfGXGK3uBkYOOg" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-uFyIwWEfGXGK3uBkYOOg" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us0IwWEfGXGK3uBkYOOg" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us0YwWEfGXGK3uBkYOOg" key="authType">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us0owWEfGXGK3uBkYOOg" name="Basic authentication" content="Basic authentication" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us04wWEfGXGK3uBkYOOg" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us1IwWEfGXGK3uBkYOOg" name="smtpUserEnv" content="System.getenv(&quot;CRISOL_SMTP_USER&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us1YwWEfGXGK3uBkYOOg" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us1owWEfGXGK3uBkYOOg" name="smtpPasswordEnv" content="System.getenv(&quot;CRISOL_SMTP_APP_PASSWORD&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us14wWEfGXGK3uBkYOOg" key="oauth2AccessToken">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us2IwWEfGXGK3uBkYOOg" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us2YwWEfGXGK3uBkYOOg" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us2owWEfGXGK3uBkYOOg" name="smtpFromEnv" content="System.getenv(&quot;CRISOL_SMTP_USER&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us24wWEfGXGK3uBkYOOg" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us3IwWEfGXGK3uBkYOOg" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us3YwWEfGXGK3uBkYOOg" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us3owWEfGXGK3uBkYOOg" name="alertRecipientEnv" content=" System.getenv(&quot;CRISOL_ALERT_RECIPIENT&quot;)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us34wWEfGXGK3uBkYOOg" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us4IwWEfGXGK3uBkYOOg" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us4YwWEfGXGK3uBkYOOg" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us4owWEfGXGK3uBkYOOg" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us44wWEfGXGK3uBkYOOg" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us5IwWEfGXGK3uBkYOOg" name="Alerta de stock bajo - Librerías Crisol" content="Alerta de stock bajo - Librerías Crisol" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us5YwWEfGXGK3uBkYOOg" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us5owWEfGXGK3uBkYOOg" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us54wWEfGXGK3uBkYOOg" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us6IwWEfGXGK3uBkYOOg" name="&lt;pattern-expression>" content="&lt;pre>&#xA;Alerta de stock bajo&#xA;&#xA;El proceso Gesti&amp;oacute;n de Inventario ha detectado productos con stock bajo.&#xA;&#xA;Ingrese a Bonita para revisar el caso y generar la solicitud de reposici&amp;oacute;n correspondiente.&#xA;&#xA;Aplicaci&amp;oacute;n:&#xA;http://localhost:8080/bonita/apps/crisol-inventario/inicio&#xA;&#xA;Este es un mensaje autom&amp;aacute;tico de Librer&amp;iacute;as Crisol.&lt;/pre>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us6YwWEfGXGK3uBkYOOg" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_l-us6owWEfGXGK3uBkYOOg"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us64wWEfGXGK3uBkYOOg" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us7IwWEfGXGK3uBkYOOg" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us7YwWEfGXGK3uBkYOOg" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_l-us7owWEfGXGK3uBkYOOg" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_l-us74wWEfGXGK3uBkYOOg" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_l-v68IwWEfGXGK3uBkYOOg"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_jHkvBF9fEfGovOaVKpslfQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_jHkvBV9fEfGovOaVKpslfQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_jHkvBl9fEfGovOaVKpslfQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
