@@ -92,6 +92,18 @@
       <artifactId>bonita-actorfilter-initiator</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.crisol.bonita.connector</groupId>
+      <artifactId>connector-rabbitmq-inventario</artifactId>
+      <version>1.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bonitasoft.connectors</groupId>
+      <artifactId>bonita-connector-email</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+
     <!-- 
     <dependency>
       <groupId>${project.groupId}</groupId>
