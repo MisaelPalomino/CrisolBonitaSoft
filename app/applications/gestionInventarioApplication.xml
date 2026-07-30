@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.1">
+    <application homePage="inicio" layout="custompage_layoutBonita" theme="custompage_themeBonita" token="crisol-inventario" version="1.0" profile="User" state="ACTIVATED">
+        <displayName>Gestión de Inventario Crisol</displayName>
+        <description>Aplicación para monitorear el inventario e integrar Bonita, RabbitMQ y el servicio Django de Librerías Crisol.</description>
+        <applicationPages>
+            <applicationPage customPage="custompage_inventarioDashboard" token="inicio"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="inicio">
+                <displayName>Inicio</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>
