@@ -1,0 +1,48 @@
+= Conector RabbitMQ para Gestión de Inventario
+
+Conector de Bonita 10.4.0 que publica la consulta de stock bajo del proceso
+`GestionInventario` en RabbitMQ.
+
+== Contrato
+
+Cola de solicitud::
+`crisol.inventario.request`
+
+Cola de respuesta (`reply-to`)::
+`crisol.inventario.response`
+
+Mensaje publicado::
+`{"tipo":"inventario.stock_bajo.consultar"}`
+
+El mensaje se publica como JSON persistente y contiene un `correlation_id`. Si
+Bonita no recibe uno, el conector genera un UUID y lo expone mediante la salida
+`correlationIdGenerado`.
+
+El mismo artefacto incluye `Consumir respuesta de inventario desde RabbitMQ`.
+Este conector espera en `crisol.inventario.response` el mensaje con el
+`correlation_id` del caso, conserva en la cola las respuestas de otros casos y
+expone `datos.alerta` mediante la salida booleana `stockBajo`.
+
+== Compilación
+
+Se requiere Java 17:
+
+[source,powershell]
+----
+mvn clean package
+----
+
+El JAR instalable en Bonita se genera en:
+
+`target/connector-rabbitmq-inventario-1.0.1-SNAPSHOT.jar`
+
+== Configuración en Bonita
+
+Asociar `Publicar consulta de inventario en RabbitMQ` como conector de entrada
+de `Monitorear nivel de stock` y `Consumir respuesta de inventario desde
+RabbitMQ` como conector de salida. Ambos deben usar el mismo `correlation_id`.
+Mapear la salida `stockBajo` del receptor a la variable homónima del proceso,
+antes de la compuerta `¿Stock bajo?`.
+
+Las credenciales deben configurarse mediante parámetros del proceso o variables
+del entorno; no deben quedar escritas directamente en el diagrama.

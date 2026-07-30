@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+    <id>${connector-definition-id}</id>
+    <version>${connector-definition-version}</version>
+    <icon>connector.png</icon>
+    <category icon="connector.png" id="Messaging"/>
+
+    <input mandatory="true" name="rabbitmqHost" type="java.lang.String" defaultValue="localhost"/>
+    <input mandatory="true" name="rabbitmqPort" type="java.lang.Integer" defaultValue="5672"/>
+    <input mandatory="true" name="rabbitmqUsername" type="java.lang.String" defaultValue="guest"/>
+    <input mandatory="true" name="rabbitmqPassword" type="java.lang.String" defaultValue="guest"/>
+    <input mandatory="true" name="rabbitmqVirtualHost" type="java.lang.String" defaultValue="/"/>
+    <input mandatory="true" name="requestQueue" type="java.lang.String" defaultValue="crisol.inventario.request"/>
+    <input mandatory="true" name="responseQueue" type="java.lang.String" defaultValue="crisol.inventario.response"/>
+    <input mandatory="true" name="messageType" type="java.lang.String" defaultValue="inventario.stock_bajo.consultar"/>
+    <input mandatory="false" name="correlationId" type="java.lang.String"/>
+
+    <output name="correlationIdGenerado" type="java.lang.String"/>
+    <output name="mensajePublicado" type="java.lang.Boolean"/>
+
+    <page id="connectionPage">
+        <widget xsi:type="definition:Text" id="rabbitmqHostWidget" inputName="rabbitmqHost"/>
+        <widget xsi:type="definition:Text" id="rabbitmqPortWidget" inputName="rabbitmqPort"/>
+        <widget xsi:type="definition:Text" id="rabbitmqUsernameWidget" inputName="rabbitmqUsername"/>
+        <widget xsi:type="definition:Password" id="rabbitmqPasswordWidget" inputName="rabbitmqPassword"/>
+        <widget xsi:type="definition:Text" id="rabbitmqVirtualHostWidget" inputName="rabbitmqVirtualHost"/>
+    </page>
+    <page id="messagePage">
+        <widget xsi:type="definition:Text" id="requestQueueWidget" inputName="requestQueue"/>
+        <widget xsi:type="definition:Text" id="responseQueueWidget" inputName="responseQueue"/>
+        <widget xsi:type="definition:Text" id="messageTypeWidget" inputName="messageType"/>
+        <widget xsi:type="definition:Text" id="correlationIdWidget" inputName="correlationId"/>
+    </page>
+</definition:ConnectorDefinition>

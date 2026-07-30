@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+    <id>${response-connector-definition-id}</id>
+    <version>${connector-definition-version}</version>
+    <icon>connector.png</icon>
+    <category icon="connector.png" id="Messaging"/>
+
+    <input mandatory="true" name="rabbitmqHost" type="java.lang.String" defaultValue="localhost"/>
+    <input mandatory="true" name="rabbitmqPort" type="java.lang.Integer" defaultValue="5672"/>
+    <input mandatory="true" name="rabbitmqUsername" type="java.lang.String" defaultValue="guest"/>
+    <input mandatory="true" name="rabbitmqPassword" type="java.lang.String" defaultValue="guest"/>
+    <input mandatory="true" name="rabbitmqVirtualHost" type="java.lang.String" defaultValue="/"/>
+    <input mandatory="true" name="responseQueue" type="java.lang.String" defaultValue="crisol.inventario.response"/>
+    <input mandatory="true" name="correlationId" type="java.lang.String"/>
+    <input mandatory="true" name="timeoutSeconds" type="java.lang.Integer" defaultValue="15"/>
+
+    <output name="stockBajo" type="java.lang.Boolean"/>
+    <output name="respuestaJson" type="java.lang.String"/>
+
+    <page id="responseConnectionPage">
+        <widget xsi:type="definition:Text" id="responseRabbitmqHostWidget" inputName="rabbitmqHost"/>
+        <widget xsi:type="definition:Text" id="responseRabbitmqPortWidget" inputName="rabbitmqPort"/>
+        <widget xsi:type="definition:Text" id="responseRabbitmqUsernameWidget" inputName="rabbitmqUsername"/>
+        <widget xsi:type="definition:Password" id="responseRabbitmqPasswordWidget" inputName="rabbitmqPassword"/>
+        <widget xsi:type="definition:Text" id="responseRabbitmqVirtualHostWidget" inputName="rabbitmqVirtualHost"/>
+    </page>
+    <page id="responseMessagePage">
+        <widget xsi:type="definition:Text" id="responseQueueWidget" inputName="responseQueue"/>
+        <widget xsi:type="definition:Text" id="responseCorrelationIdWidget" inputName="correlationId"/>
+        <widget xsi:type="definition:Text" id="timeoutSecondsWidget" inputName="timeoutSeconds"/>
+    </page>
+</definition:ConnectorDefinition>
